@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\bin\Release\AutoBackup.exe.config
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\bin\Release\AutoBackup.exe
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\bin\Release\AutoBackup.pdb
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.Form1.resources
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.Properties.Resources.resources
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.exe
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.pdb
+C:\Users\Usuario\source\repos\AutoBackup\AutoBackup\obj\Release\AutoBackup.csproj.AssemblyReference.cache
