@@ -8,5 +8,8 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 [AutoBackup PHP](pudim.com.br)
 
 ## Uma olhada no codigo
+**Como foi feito:**
+- [Usar o CMD em um app WinForms](###usar-o-cmd-em-um-app-winforms)
+- [Abrir links no navegador](#AutoBackup)
 
-- [inicio](##uma-olhada-no-codigo)
+### Usar o CMD em um app WinForms
