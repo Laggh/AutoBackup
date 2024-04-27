@@ -8,10 +8,68 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 [AutoBackup PHP](pudim.com.br)
 
 ## Uma olhada no codigo
-**Como foi feito:**
-- [Usar o CMD em um app WinForms](#cmd-no-winForms)
-- [Abrir links no navegador](#AutoBackup)
+>Aconcelho saber c# primeiramente para entender melhor o codigo 👍
 
-<a name="cmd-no-winForms"> </a>
-### Usar o CMD em um app WinForms 
+**Como foi feito:** <br>
+- [Uso do CMD no winForms](pudim.com.br)
+- [Abrir Links](pudim.com.br)
+- [Uso do CMD no winForms](pudim.com.br)
+- [Uso do CMD no winForms](pudim.com.br)
+- [Uso do CMD no winForms](pudim.com.br)
 
+### CMD no winForms
+```C#
+void executeCmd(string command)
+{
+  Process process = new Process();
+  process.StartInfo.FileName = "CMD.exe"; 
+  process.StartInfo.CreateNoWindow = !mostrarCmd; 
+  process.StartInfo.Arguments = "/C " + command; //Usa "/C <comando>" como parametro de inicialização
+  process.StartInfo.UseShellExecute = false; //Necessario para o CreateNoWindow funcionar
+  
+  process.Start(); //Cria 
+  process.WaitForExit(); //Espera
+  process.Close(); //Fecha
+}
+```
+
+Primeiramente precisamos criar um objeto com da classe `Processo`
+```C#
+Process process = new Process();
+```
+
+Iremos iniciar o CMD do computador, então definimos ele com o arquivo usado
+```C#
+process.StartInfo.FileName = "CMD.exe"; 
+```
+
+Com isso temos que definir como o CMD ira ser iniciado, então definimos que ele ira iniciar iniciar sem mostrar uma janela para ser mais limpo para o usuario 
+```C#
+process.StartInfo.UseShellExecute = false; //Necessario para o CreateNoWindow funcionar
+process.StartInfo.CreateNoWindow = !mostrarCmd; 
+```
+>Estamos usando o inverso da variavel `mostrarCmd` pois se queremos mostrar ele, então falamos para o programa não esconder a janela e vice versa
+
+Após isso, nos definimos com que parametros o CMD será iniciado, é necessario colocar `/C` antes do comando para o CMD saber que ele tem que executar o comando
+```C#
+process.StartInfo.Arguments = "/C " + command;
+```
+
+Com isso tudo definido nós simplesmente Iniciamos o CMD, esperamos ele executar o comando, e depois fechamos ele
+```C#
+process.Start(); //Cria 
+process.WaitForExit(); //Espera
+process.Close(); //Fecha
+```
+Agora para podermos usar o CMD só usamos o methodo `executeCmd(comandoMuitoLegal);` para fazermos o comando 
+### Recirecionar para sites
+A parte mais dificil é fazer uma maneira de usar o CMD, porem com ele podemos fazer muitas coisas, como abrir paginas da web, veja no exemplo como que usariamos o cmd para ir a uma pagina web
+```Batchfile
+start "https://laggh.github.io/AutoBackup/#AutoBackup"
+```
+
+Com o sistema do CMD ja funcionando, iremos apenas chamar o metodo e colocar o comando
+```C#
+executeCmd("start \"https://laggh.github.io/AutoBackup/#AutoBackup\"");
+```
+>colocamos `\` antes das aspas para o C# não achar que estamos finalizando a string, as aspas são para o CMD 
