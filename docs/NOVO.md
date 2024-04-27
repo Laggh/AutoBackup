@@ -1,8 +1,8 @@
 What ta hell
-<head>
-</head>
 
-  <body>
-    teste muito insano
-  </body>
-
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
