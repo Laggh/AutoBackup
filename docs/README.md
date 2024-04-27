@@ -9,4 +9,4 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 
 ## Uma olhada no codigo
 
-- [inicio](#AutoBackup)
+- [inicio](##uma-olhada-no-codigo)
