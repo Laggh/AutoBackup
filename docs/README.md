@@ -13,3 +13,19 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 - [Abrir links no navegador](#AutoBackup)
 
 ### Usar o CMD em um app WinForms
+
+# Contents
+ - [Specification](#specification) 
+ - [Dependencies Title](#dependencies-title) 
+
+## Specification
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. 
+
+## Dependencies Title
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. Example text blah. Example text blah. 
+Example text blah. Example text blah. 
