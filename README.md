@@ -1,4 +1,4 @@
-theme: Architect
+theme: jekyll-theme-minima
 # AutoBackup
 ## backup
 ### BackBackup
