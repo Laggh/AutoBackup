@@ -1,4 +1,4 @@
-theme: Architec
+theme: Architect
 # AutoBackup
 ## backup
 ### BackBackup
