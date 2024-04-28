@@ -1,3 +1,5 @@
+<link href="style.css" rel="stylesheet">
+
 # AutoBackup
 [English version of the site](joeBiden.md)
 ## Introdução
