@@ -1,5 +1,6 @@
 # Configuration file for a GitHub Pages site
-title: AutoBackup
+# title: AutoBackup
+title: ''
 # description: Site simples usando o GitHub Pages
 
 # theme: jekyll-theme-cayman
