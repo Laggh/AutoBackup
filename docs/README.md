@@ -1,7 +1,7 @@
 <head>
   <style=
     background: black;
-  </style
+  </style>
 </head>
     
 # AutoBackup
