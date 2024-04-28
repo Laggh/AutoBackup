@@ -72,4 +72,17 @@ Com o sistema do CMD ja funcionando, iremos apenas chamar o metodo e colocar o c
 ```C#
 executeCmd("start \"https://laggh.github.io/AutoBackup/#AutoBackup\"");
 ```
+>colocamos `\` antes das aspas para o C# não achar que estamos finalizando a string, as aspas são para o CMD
+
+### Fazer o backup
+Agora que ja sabemos como umar o `executeCmd()` conseguimos fazer o metodo de backup em si, para copiar uma pasta inteira para outro lugar iremos usar o comando `XCOPY`, sua ele funciona assim:  
+```Batchfile
+xcopy "LocalDeOrigem" "LocalDeDestino"
+```
+
+porem nós iremos colocar alguns parametros extras
+Com o sistema do CMD ja funcionando, iremos apenas chamar o metodo e colocar o comando
+```C#
+executeCmd("start \"https://laggh.github.io/AutoBackup/#AutoBackup\"");
+```
 >colocamos `\` antes das aspas para o C# não achar que estamos finalizando a string, as aspas são para o CMD 
