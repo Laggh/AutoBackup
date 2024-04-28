@@ -20,7 +20,7 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 - [Uso do CMD no winForms](pudim.com.br)
 
 ### CMD no winForms
-```C#
+```c#
 void executeCmd(string command)
 {
   Process process = new Process();
@@ -36,29 +36,29 @@ void executeCmd(string command)
 ```
 
 Primeiramente precisamos criar um objeto com da classe `Processo`
-```C#
+```c#
 Process process = new Process();
 ```
 
 Iremos iniciar o CMD do computador, então definimos ele com o arquivo usado
-```C#
+```c#
 process.StartInfo.FileName = "CMD.exe"; 
 ```
 
 Com isso temos que definir como o CMD ira ser iniciado, então definimos que ele ira iniciar iniciar sem mostrar uma janela para ser mais limpo para o usuario 
-```C#
+```c#
 process.StartInfo.UseShellExecute = false; //Necessario para o CreateNoWindow funcionar
 process.StartInfo.CreateNoWindow = !mostrarCmd; 
 ```
 >Estamos usando o inverso da variavel `mostrarCmd` pois se queremos mostrar ele, então falamos para o programa não esconder a janela e vice versa
 
 Após isso, nos definimos com que parametros o CMD será iniciado, é necessario colocar `/C` antes do comando para o CMD saber que ele tem que executar o comando
-```C#
+```c#
 process.StartInfo.Arguments = "/C " + command;
 ```
 
 Com isso tudo definido nós simplesmente Iniciamos o CMD, esperamos ele executar o comando, e depois fechamos ele
-```C#
+```c#
 process.Start(); //Cria 
 process.WaitForExit(); //Espera
 process.Close(); //Fecha
@@ -66,19 +66,19 @@ process.Close(); //Fecha
 Agora para podermos usar o CMD só usamos o methodo `executeCmd(comandoMuitoLegal);` para fazermos o comando 
 ### Recirecionar para sites
 A parte mais dificil é fazer uma maneira de usar o CMD, porem com ele podemos fazer muitas coisas, como abrir paginas da web, veja no exemplo como que usariamos o cmd para ir a uma pagina web
-```Batchfile
+```batchfile
 start "https://laggh.github.io/AutoBackup/#AutoBackup"
 ```
 
 Com o sistema do CMD ja funcionando, iremos apenas chamar o metodo e colocar o comando
-```C#
+```c#
 executeCmd("start \"https://laggh.github.io/AutoBackup/#AutoBackup\"");
 ```
 >colocamos `\` antes das aspas para o C# não achar que estamos finalizando a string, as aspas são para o CMD
 
 ### Fazer o backup
 Agora que ja sabemos como umar o `executeCmd()` conseguimos fazer o metodo de backup em si, para copiar uma pasta inteira para outro lugar iremos usar o comando `XCOPY`, sua ele funciona assim:  
-```Batchfile
+```batchfile
 xcopy "LocalDeOrigem" "LocalDeDestino"
 ```
 
@@ -92,18 +92,18 @@ porem nós iremos colocar alguns parametros extras, veja abaixo oque eles fazem:
 
 Então para rodar o comando nós fazemos esse codigo
 
-```Batchfile
+```batchfile
 xcopy /s /e /y "LocalDeOrigem" "LocalDeDestino"
 ```
 
 Que quando traduzido para c# ficará como
-```C#
+```c#
 executeCmd("xcopy /s /e /y " + origin + " " + backup);
 ```
 >`origin` e `backup` são as variaveis que estamos usando
 
 ### Entrada Rapida (PHP)
-```C#
+```c#
 string url = "http://localhost";
 
 string porta = txtPorta.Text; //Define a variavel porta para o valor escolhido pelo usuario
@@ -121,11 +121,11 @@ if (!pasta.Equals(""))
 executeCmd("start " + url);
 ```
 A entrada rapida é usada pra rapidamente acessar o ip do XAMPP, para isso primeiramente nos definimos o IP que iremos acessar, que será `"http://localhost"`, por enquanto vamos definir uma variavel para termos mais controle de qual pagina web iremos (Obrigatoriamente é necessario colocar o "http://")
-```C#
+```c#
 string url = "http://localhost";
 ```
 Com isso nós iremos verificar se o usuario escolheu uma porta para acessar, se ele definiu, então iremos adicionar ":" e depois a porta
-```C#
+```c#
 string porta = txtPorta.Text; //Define a variavel porta para o valor escolhido pelo usuario
 if (!porta.Equals("")) //Se a porta não for nula
 {
@@ -133,7 +133,7 @@ if (!porta.Equals("")) //Se a porta não for nula
 }
 ```
 Fazemos a mesma coisa com a Pasta escolhida, porem usando "/" ao invez de dois pontos
-```C#
+```c#
 string pasta = txtPasta.Text;
 if (!pasta.Equals(""))
 {
@@ -141,6 +141,6 @@ if (!pasta.Equals(""))
 }
 ```
 Após isso, simplesmente usamos o metodo do CMD para abrir essa pagina no navegador de internet
-```C#
+```c#
 executeCmd("start " + url);
 ```
