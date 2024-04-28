@@ -144,4 +144,6 @@ Após isso, simplesmente usamos o metodo do CMD para abrir essa pagina no navega
 ```c#
 executeCmd("start " + url);
 ```
+
+Hamburguer, Hamburguer
 <script src="https://gist.github.com/Laggh/c96ed3187ed66905cd2e61602f1832d3.js"></script>
