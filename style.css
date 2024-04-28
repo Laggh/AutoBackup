@@ -1,3 +1,8 @@
+header, footer{
+  display:none;
+}
+
+/*
 body{
   background-color: #333;
 }
@@ -8,3 +13,4 @@ h1, h2, p{
 a {
   color:green;
 }
+*/
