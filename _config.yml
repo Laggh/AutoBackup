@@ -2,4 +2,5 @@
 title: My GitHub Pages Site
 description: A simple and elegant website powered by Jekyll and GitHub Pages.
 theme: jekyll-theme-cayman
+syntax_highlighter: rouge
 # theme: minima
