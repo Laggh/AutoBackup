@@ -9,7 +9,7 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 [Lista Completa de versões](https://github.com/Laggh/AutoBackup/releases) <br>
 [AutoBackup 1.0](https://github.com/Laggh/AutoBackup/releases/download/Release/AutoBackupWin.v1.0.exe) <br>
 [AutoBackup PHP](https://github.com/Laggh/AutoBackup/releases/download/PHP_edition/AutoBackupPHP.exe)
-
+> Todas as versões são para windows e foram testadas em computadores com Windows 10, qualquer problema pode ser reportado [Aqui](https://github.com/Laggh/AutoBackup/issues)
 ## Uma olhada no codigo
 >Aconcelho saber c# primeiramente para entender melhor o codigo 👍
 
