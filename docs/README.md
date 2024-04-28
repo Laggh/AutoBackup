@@ -11,10 +11,10 @@ AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/sea
 >Aconcelho saber c# primeiramente para entender melhor o codigo 👍
 
 **Como foi feito:** <br>
-- [Uso do CMD no winForms](pudim.com.br)
-- [Abrir Links](pudim.com.br)
-- [Uso do CMD no winForms](pudim.com.br)
-- [Uso do CMD no winForms](pudim.com.br)
+- [Uso do CMD no winForms](#cmd-no-winforms)
+- [Redirecionar para sites](#recirecionar-para-sites)
+- [Fazer o Backup](#fazer-o-backup)
+- [Entrada Rapida (AutoBackup PHP](#entrada-rapida-php)
 - [Uso do CMD no winForms](pudim.com.br)
 
 ### CMD no winForms
@@ -80,9 +80,24 @@ Agora que ja sabemos como umar o `executeCmd()` conseguimos fazer o metodo de ba
 xcopy "LocalDeOrigem" "LocalDeDestino"
 ```
 
-porem nós iremos colocar alguns parametros extras
-Com o sistema do CMD ja funcionando, iremos apenas chamar o metodo e colocar o comando
-```C#
-executeCmd("start \"https://laggh.github.io/AutoBackup/#AutoBackup\"");
+porem nós iremos colocar alguns parametros extras, veja abaixo oque eles fazem:
+
+| Parametro   | Descrição |
+| -  | ----------- |
+| /s | Copia todas as pastas e até pastas dentro de outras pastas   |
+| /e | Copia até pastas vazias                                      |
+| /y | Sobreescreve arquivos no destino sem confirmação do usuario  |
+
+Então para rodar o comando nós fazemos esse codigo
+
+```Batchfile
+xcopy /s /e /y "LocalDeOrigem" "LocalDeDestino"
 ```
->colocamos `\` antes das aspas para o C# não achar que estamos finalizando a string, as aspas são para o CMD 
+
+Que quando traduzido para c# ficará como
+```C#
+executeCmd("xcopy /s /e /y " + origin + " " + backup);
+```
+>`origin` e `backup` são as variaveis que estamos usando
+
+### Entrada Rapida (PHP)
