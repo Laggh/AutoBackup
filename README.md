@@ -1,7 +1,7 @@
 <link href="style.css" rel="stylesheet">
 
 # AutoBackup
-[English version of the site](joeBiden.md)
+[English version of the site](docs/ENGLISH.md)
 ## Introdução
 AutoBackup é uma ferramenta criada usando [winForms](https://www.google.com/search?q=winForms), ela serve para facilitar o backup de arquivos enquanto você trabalha em um projeto, o AutoBackup é uma ferramenta gratuita e usa a licensa Creative Commons Legal Code, isso siginifica que você pode usar o codigo dela para quaisquer fins não comerciais
 
