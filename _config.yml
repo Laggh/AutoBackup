@@ -1,9 +1,4 @@
-highlighter: rouge
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
-
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-
+# Configuration file for a GitHub Pages site
+title: My GitHub Pages Site
+description: A simple and elegant website powered by Jekyll and GitHub Pages.
+theme: minima
