@@ -101,3 +101,44 @@ executeCmd("xcopy /s /e /y " + origin + " " + backup);
 >`origin` e `backup` são as variaveis que estamos usando
 
 ### Entrada Rapida (PHP)
+```C#
+string url = "http://localhost";
+
+string porta = txtPorta.Text; //Define a variavel porta para o valor escolhido pelo usuario
+if (!porta.Equals("")) //Se a porta não for nula
+{
+  url = url + ":" + porta; //Adicionar ela no endereço IP
+}
+
+string pasta = txtPasta.Text;
+if (!pasta.Equals(""))
+{
+  url = url + "/" + pasta + "/";
+}
+
+executeCmd("start " + url);
+```
+A entrada rapida é usada pra rapidamente acessar o ip do XAMPP, para isso primeiramente nos definimos o IP que iremos acessar, que será `"http://localhost"`, por enquanto vamos definir uma variavel para termos mais controle de qual pagina web iremos (Obrigatoriamente é necessario colocar o "http://")
+```C#
+string url = "http://localhost";
+```
+Com isso nós iremos verificar se o usuario escolheu uma porta para acessar, se ele definiu, então iremos adicionar ":" e depois a porta
+```C#
+string porta = txtPorta.Text; //Define a variavel porta para o valor escolhido pelo usuario
+if (!porta.Equals("")) //Se a porta não for nula
+{
+  url = url + ":" + porta; //Adicionar ela no endereço IP
+}
+```
+Fazemos a mesma coisa com a Pasta escolhida, porem usando "/" ao invez de dois pontos
+```C#
+string pasta = txtPasta.Text;
+if (!pasta.Equals(""))
+{
+  url = url + "/" + pasta + "/";
+}
+```
+Após isso, simplesmente usamos o metodo do CMD para abrir essa pagina no navegador de internet
+```C#
+executeCmd("start " + url);
+```
