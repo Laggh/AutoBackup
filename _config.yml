@@ -7,3 +7,13 @@ description: Site simples usando o GitHub Pages
 # remote_theme: pages-themes/hacker@v0.2.0
 # plugins:
 # - jekyll-remote-theme # add this line to the plugins list if you already have one
+
+remote_theme: jekyll/minima
+
+plugins:
+  # whatever else was already here...
+  - jekyll-remote-theme
+
+minima:
+  skin: dark # or auto if you want it to switch with your system settings.
+  
